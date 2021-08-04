@@ -14,9 +14,30 @@ let package = Package(
         .library(
             name: "Color",
             targets: ["Color"]),
+        .library(
+            name: "ImagePicker",
+            targets: ["ImagePicker"]),
+        .library(
+            name: "Previews",
+            targets: ["Previews"]),
     ],
     dependencies: [],
     targets: [
         .target(name: "Color"),
+        .target(name: "ImagePicker"),
+        .target(name: "Previews"),
+
+        .testTarget(
+            name: "ColorTests",
+            dependencies: [
+                .target(name: "Color")
+            ]
+        ),
+        .testTarget(
+            name: "PreviewTests",
+            dependencies: [
+                .target(name: "Previews")
+            ]
+        ),
     ]
 )

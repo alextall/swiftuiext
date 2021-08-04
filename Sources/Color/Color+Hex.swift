@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 14.0, *)
 extension Color {
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
